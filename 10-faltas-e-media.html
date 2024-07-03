@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Aprovado, Exame, Reprovado</h1>
+    <script>
+        var nota1 = parseInt(prompt("Digite a nota 1:"))
+        var nota2 = parseInt(prompt("Digite a nota 2:"))
+        var nota3 = parseInt(prompt("Digite a nota 3:"))
+        var nota4 = parseInt(prompt("Digite a nota 4:"))
+
+        var falta1 = parseInt(prompt("Digite as faltas no bimestre 1:"))
+        var falta2 = parseInt(prompt("Digite as faltas no bimestre 2:"))
+        var falta3 = parseInt(prompt("Digite as faltas no bimestre 3:"))
+        var falta4 = parseInt(prompt("Digite as faltas no bimestre 4:"))
+
+        var media = (nota1 + nota2 + nota3 + nota4) / 4
+        var totalFalta = (falta1 + falta2 + falta3 + falta4)
+
+        if (media >= 7 && (totalFalta * 1.25) < 25) { alert("Aprovado") }
+        if (media < 7 && (totalFalta * 1.25) < 25) { alert("Exame") }
+        if ((totalFalta *1.25) > 25) { alert("Reprovado")}
+    </script>
+</body>
+
+</html>

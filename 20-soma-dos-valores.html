@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soma de Valores</h1>
+    <script>
+        let qtd = parseInt(prompt("Quantos numeros?"))
+        let i = 1;
+        let soma = 0;
+
+        while (i<=qtd) {
+            let valor = parseInt(prompt("Digite o valor " + i));
+            soma += valor;
+            i++;
+        }
+
+        document.write(`A soma dos ${qtd} valores digitados é ${soma}.`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Media Alunos</h1>
+
+    <script>
+        var nota1 = parseFloat(prompt("Digite a nota 1:"));
+        var nota2 = parseFloat(prompt("Digite a nota 2:"));
+
+        media = (nota1 + nota2) / 2
+
+        if (media < 6 || nota1 == 0 || nota2 == 0) {
+            alert("Puxa te vejo no mesmo ano, no ano que vem")
+        }else{
+            alert("Parabéns! Aprovado... Curta suas férias.")
+        }
+    </script>
+</body>
+</html>

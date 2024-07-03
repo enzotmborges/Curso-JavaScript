@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tabuada 1~1000</h1>
+    <script>
+        let num = parseInt(prompt("Digite um número:"));
+        let i = 1;
+
+        let escolha = prompt("Vc quer usar For, While ou DoWhile? (digite a opção desejada)")
+
+        switch (escolha) {
+
+            //tabuada for
+            case "for": {
+                document.write("Usando For <br><br>")
+                for (i = 1; i <= 1000; i++) {
+                    document.write(`${num} * ${i} = ${num * i} <br>`);
+                    if (i % 10 == 0) { document.write("<hr>") };
+                }
+                break;
+            }
+
+            //tabuada while
+            case "while": {
+                document.write("Usando While <br><br>")
+                while (i <= 1000) {
+                    document.write(`${num} * ${i} = ${num * i} <br>`);
+                    if (i % 10 == 0) { document.write("<hr>") }; i++;
+                }
+                break;
+            }
+
+            //tabuada doWhile
+            case "dowhile": {
+                document.write("Usando DoWhile <br><br>")
+                do {
+                    document.write(`${num} * ${i} = ${num * i} <br>`);
+                    if (i % 10 == 0) { document.write("<hr>") }; i++;
+                }
+                while (i <= 1000);
+                break;
+            }
+
+            //else
+            default: {
+                alert("opção inválida!")
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>

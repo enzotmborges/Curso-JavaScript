@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var j1 = parseInt(prompt("Digite o número, jogador 1:"))
+        var j2 = parseInt(prompt("Digite o número, jogador 2:"))
+
+        if (j1 == j2) {alert("Empate")}
+        else {
+            var numSort = Math.floor(Math.random() * 2)
+
+            if (numSort == 0 & j1 < j2) {
+                alert("O número sorteado foi " + numSort + ". O jogador com menor numero vence")
+                alert("O jogador 1 venceu")}
+            if (numSort == 0 & j1 > j2) {
+                alert("O número sorteado foi " + numSort + ". O jogador com menor numero vence")
+                alert("O jogador 2 venceu")}
+
+            if (numSort == 1 & j1 > j2) {
+                alert("O número sorteado foi " + numSort + ". O jogador com maior numero vence")
+                alert("O jogador 1 venceu")}
+            if (numSort == 1 & j1 < j2) {
+                alert("O número sorteado foi " + numSort + ". O jogador com maior numero vence")
+                alert("O jogador 2 venceu")}
+        }
+    </script>
+</body>
+</html>

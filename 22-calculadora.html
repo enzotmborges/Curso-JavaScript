@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Cria os botoes de numero em uma mesma funcao -->
+    <button onclick="botao('1')">1</button>
+    <button onclick="botao('2')">2</button>
+    <button onclick="botao('3')">3</button>
+    <button onclick="botao('4')">4</button>
+    <button onclick="botao('5')">5</button>
+    <button onclick="botao('6')">6</button>
+    <button onclick="botao('7')">7</button>
+    <button onclick="botao('8')">8</button>
+    <button onclick="botao('9')">9</button>
+    <button onclick="botao('0')">0</button>
+
+    <!-- Cria os botoes de operacao em uma mesma funcao -->
+    <button onclick="operacao('+')">+</button>
+    <button onclick="operacao('-')">-</button>
+    <button onclick="operacao('*')">*</button>
+    <button onclick="operacao('/')">/</button>
+
+    <!-- Botao de calcular -->
+    <button onclick="calcular()">=</button>
+    <button onclick="limpar()">limpar</button>
+
+    <div id="saida"></div>
+
+    <!-- Script -->
+    <script>
+        //variaveis
+        var saida = document.querySelector("#saida")
+        var calculo = ""
+        var calculoAntigo = ""
+        var opAtual = ""
+
+        //funcao dos botoes de numero (num pega qual numero foi clicado)
+        function botao(num) {
+            calculo += num;
+            saida.innerHTML = calculo
+        }
+
+        //funcao de operacoes
+        function operacao(op) {
+            calculoAntigo = calculo;
+            calculo = "";
+            saida.innerHTML = op;
+            opAtual = op;
+        }
+
+        function limpar() {
+            calculoAntigo = ""
+            calculo = ""
+            opAtual = ""
+            saida.innerHTML = ""
+        }
+
+        //funcao de calculo
+        function calcular() {
+            var resultado;
+
+            // faz o calculo dependendo do operador usado
+            switch (opAtual) {
+                case '+':
+                    resultado = parseInt(calculoAntigo) + parseInt(calculo);
+                    break;
+
+                case '-':
+                    resultado = parseInt(calculoAntigo) - parseInt(calculo);
+                    break;
+
+                case '*':
+                    resultado = parseInt(calculoAntigo) * parseInt(calculo);
+                    break;
+
+                case '/':
+                    resultado = parseInt(calculoAntigo) / parseInt(calculo);
+                    break;
+            }
+            //escreve o resultado e reseta as variaveis
+            saida.innerHTML = resultado;
+            calculo = resultado
+            calculoAntigo = ""
+            opAtual = ""
+        }
+
+    </script>
+</body>
+
+</html

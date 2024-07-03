@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Maior Número</h1>
+    <script>
+        let i = 1
+        let comparacao = null
+        let val = null
+
+        while (i <= 5) {
+            comparacao = val
+            val = parseInt(prompt("Digite o valor " + i))
+
+            if (comparacao >= val) {val = comparacao}
+            else {val = val}
+            i++
+        }
+
+        document.write("O maior numero digitado foi " + val)
+    </script>
+</body>
+
+</html>

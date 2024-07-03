@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DOM - Document Object Model</h1>
+
+    <!-- Criar os botoes -->
+    <button onclick="limparTabuada()">Limpar a tabuada</button>
+    <button onclick="gerarTabuada()">Gerar a tabuada</button>
+
+    <div id="saida"></div>
+
+    <!-- Mundo Script -->
+    <script>
+        function gerarTabuada() {
+            var saida = document.querySelector("#saida")
+
+            var mensagem = ""
+            var nTabuada = ""
+            let num = parseInt(prompt("Digite um número:"));
+
+            //tabuada 1 ao 1000
+            for (let i = 1; i <= 1000; i++) {
+                mensagem += nTabuada = (`${num} * ${i} = ${num * i} <br>`);
+            }
+
+            saida.innerHTML = mensagem;
+        }
+
+        function limparTabuada() {
+            mensagem = null
+            
+            saida.innerHTML = mensagem;
+        }
+    </script>
+</body>
+
+</html>
